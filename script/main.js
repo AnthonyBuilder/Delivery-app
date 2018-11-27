@@ -2,14 +2,13 @@
 // Obtem todas as tuplas do servidor
 function getPedidos() {
 
-    let h1 = document.querySelectorAll('h1');
-
     firebase.database().ref('pedidos').once('value', function(snapshot){
         snapshot.forEach(function (childSnapshot) {
             let childKey = childSnapshot.key;
             let childData = childSnapshot.val();
+
             
-            let element = "<ul><li>" + childData + "</li></ul>";
+
         });
     });
 } 
